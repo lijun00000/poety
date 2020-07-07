@@ -1,0 +1,27 @@
+
+<view class="content">
+  <view class="top-search">
+    <input class="search-input" model:value="{{value}}" bindblur="blur" data-="{{value}}"/>
+    <button bindtap="search" type="primary" size="mini">搜索</button>
+  </view>
+  <view class="content-1">
+    <text>下面那一句出自唐代李坤的悯农？</text>
+    <radio-group bindchange="radioChange">
+      <view class="radio-item"><radio value="春种一粒粟">春种一粒粟</radio></view>
+      <view class="radio-item"><radio value="人有悲欢离合">人有悲欢离合</radio></view>
+      <view class="radio-item"><radio value="语出惊山鸟">语出惊山鸟</radio></view>
+      <view class="radio-item"><radio value="举头望明月">举头望明月</radio></view>
+    </radio-group>
+    <!-- <input type="text" class="content-1-input"></input> -->
+    <view>
+      <!-- <view><navigator url="../index"><button>不玩了</button></navigator></view> -->
+      <view><button type="primary">确定</button></view>
+    </view>
+  </view>
+  <view class="menu">
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">地图</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">论坛</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">互动</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">个人中心</view></navigator>
+  </view>
+</view>

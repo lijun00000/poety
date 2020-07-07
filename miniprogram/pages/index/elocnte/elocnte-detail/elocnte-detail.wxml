@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="content">
+  <view class="top-search">
+    <input model : value="{{value}}" bindblur="blur" data-=""/>
+    <button bindtap="search" type="primary" size="mini">搜索</button>
+  </view>
+  <view class="style-row title">
+    <view class="title-text">沁园春·雪</view>
+    <view><button type="default" size="mini">我要朗诵</button></view>
+  </view>
+  <view wx:for="{{[1,2,3,4,5,6]}}" class="style-row content-1">
+    <view>
+      <icon type="info" size="34"></icon>
+    </view>
+    <view>
+      <text>张三</text>
+    </view>
+    <view>
+      <text>1220</text>
+    </view>
+  </view>
+  <view>
+    <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+    <button type="primary" bindtap="audioPlay">播放</button>
+    <button type="primary" bindtap="audioPause">暂停</button>
+    <button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+    <button type="primary" bindtap="audioStart">回到开头</button>
+  </view>
+  <view class="menu">
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">地图</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">论坛</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">互动</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">个人中心</view></navigator>
+  </view>
+</view>
+  

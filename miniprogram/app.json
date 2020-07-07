@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/poetry-solitaire/poetry-solitaire",
+    "pages/index/keywordanswer/keywordanswer",
+    "pages/index/matching/matching",
+    "pages/index/elocnte/elocnte",
+    "pages/index/think/think",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

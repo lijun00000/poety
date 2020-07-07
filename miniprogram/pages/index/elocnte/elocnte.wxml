@@ -1,0 +1,58 @@
+
+<view class="content">
+  <view class="top-search">
+    <input class="search-input" model:value="{{value}}" bindblur="blur" data-="{{value}}"/>
+    <button bindtap="search" type="primary" size="mini">搜索</button>
+  </view>
+  <view class="content-1">
+    <view class="hot-elocnte">
+      <text>热门朗诵</text>
+    </view>
+    <view class="style-row hot-elocnte-item">
+      <view class="hot-elocnte-item-text"><text>沁园春·雪</text></view>
+      <view class="hot-elocnte-item-icon"><icon bindtap="goToDetail" data-="雪" type="download" size="28"></icon></view>
+    </view>
+    <view class="style-row hot-elocnte-item">
+      <view class="hot-elocnte-item-text"><text>悯农</text></view>
+      <view class="hot-elocnte-item-icon"><icon type="download" size="28"></icon></view>
+    </view>
+    <view class="style-row hot-elocnte-item">
+      <view class="hot-elocnte-item-text"><text>锦瑟</text></view>
+      <view class="hot-elocnte-item-icon"><icon type="download" size="28"></icon></view>
+    </view>
+    <view class="style-row hot-elocnte-item">
+      <view class="hot-elocnte-item-text"><text>白雪歌送武判官归京</text></view>
+      <view class="hot-elocnte-item-icon"><icon type="download" size="28"></icon></view>
+    </view>
+    <view class="style-row hot-elocnte-item">
+      <view class="hot-elocnte-item-text"><text>雨霖铃</text></view>
+      <view class="hot-elocnte-item-icon"><icon type="download" size="28"></icon></view>
+    </view>
+    <view class="style-row hot-elocnte-item">
+      <view class="hot-elocnte-item-text"><text>满江红</text></view>
+      <view class="hot-elocnte-item-icon"><icon type="download" size="28"></icon></view>
+    </view>
+    <view class="style-row hot-elocnte-item">
+      <view class="hot-elocnte-item-text"><text>离思五首·其四</text></view>
+      <view class="hot-elocnte-item-icon"><icon type="download" size="28"></icon></view>
+    </view>
+    <view class="style-row hot-elocnte-item">
+      <view class="hot-elocnte-item-text"><text>春望</text></view>
+      <view class="hot-elocnte-item-icon"><icon type="download" size="28"></icon></view>
+    </view>
+    <view class="style-row hot-elocnte-item">
+      <view class="hot-elocnte-item-text"><text>无题</text></view>
+      <view class="hot-elocnte-item-icon"><icon type="download" size="28"></icon></view>
+    </view>
+    <view class="style-row hot-elocnte-item">
+      <view class="hot-elocnte-item-text"><text>春晓</text></view>
+      <view class="hot-elocnte-item-icon"><icon type="download" size="28"></icon></view>
+    </view>
+  </view>
+  <view class="menu">
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">地图</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">论坛</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">互动</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">个人中心</view></navigator>
+  </view>
+</view>

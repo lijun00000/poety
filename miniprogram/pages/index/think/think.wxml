@@ -1,0 +1,21 @@
+
+<view class="content">
+  <view class="top-search">
+    <input class="search-input" model:value="{{value}}" bindblur="blur" data-="{{value}}"/>
+    <button bindtap="search" type="primary" size="mini">搜索</button>
+  </view>
+  <view class="content-1">
+    <text>相关地点：西安</text>
+    <textarea adjust-position placeholder="请输入有关西安的诗/词名，以逗号分隔。"></textarea>
+    <view>
+    <!-- <view><navigator url="../index"><button>不玩了</button></navigator></view> -->
+    <view><button type="primary">确定</button></view>
+  </view>
+  </view>
+  <view class="menu">
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">地图</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">论坛</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">互动</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">个人中心</view></navigator>
+  </view>
+</view>
