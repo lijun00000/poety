@@ -72,6 +72,9 @@ input {
   background-color: #ffffff;
   padding: 10rpx 0 0 0;
 }
+.ranking-content {
+  height: 482rpx;
+}
 .ranking {
   width: 70%;
   text-align: left;

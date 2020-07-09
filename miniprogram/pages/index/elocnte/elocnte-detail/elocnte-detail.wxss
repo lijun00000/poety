@@ -3,7 +3,8 @@
 .content {
   background-color: #f0f0f0;
   text-align: center;
-  min-height: 1033rpx;
+  width: 730rpx;
+  height: 1036rpx;
   padding: 10rpx 10rpx 80rpx 10rpx;
 }
 .menu {
@@ -40,12 +41,18 @@
 .title-text {
   font-size: 24px;
   line-height: 74rpx;
-  margin-right: 320rpx;
+  margin-right: 312rpx;
   padding-left: 10rpx;
+}
+.comment-count {
+  margin-left: 74rpx;
+}
+.goToPlay {
+  margin-left: 100rpx;
 }
 button[size=mini][type=default] {
   margin-top: 8rpx;
-
+  margin-left: 8rpx;
 }
 input {
   border: solid;
@@ -71,7 +78,9 @@ input {
   background-color: #ffffff;
   padding: 10rpx 0 0 0;
 }
-
+.list {
+  height: 1032rpx;
+}
 .navigator-hover {
   color:blue;
 }

@@ -5,6 +5,9 @@
     "pages/index/keywordanswer/keywordanswer",
     "pages/index/matching/matching",
     "pages/index/elocnte/elocnte",
+    "pages/index/elocnte/elocnte-detail/elocnte-detail",
+    "pages/index/elocnte/elocnte-detail/elocnte-voice/elocnte-voice",
+    "pages/index/elocnte/elocnte-detail/record/record",
     "pages/index/think/think",
     "pages/logs/logs"
   ],

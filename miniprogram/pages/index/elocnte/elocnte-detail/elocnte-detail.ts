@@ -3,13 +3,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    animationData: {}
+  },
+  goToPlay() {
+    wx.navigateTo({
+      url: '../elocnte-detail/elocnte-voice/elocnte-voice?url=/pages/music/周杰伦 - 默 .mp3'
+    });
+  },
+  goToRecord() {
+    wx.navigateTo({
+      url: '../elocnte-detail/record/record?name=沁园春·雪'
+    });
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(data:any) {
-    console.log(data.name);
+  onLoad(param) {
+    console.log(param.name);
     wx.setNavigationBarTitle({
       title: '诗词朗诵'
     });
@@ -18,7 +28,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    
   },
   /**
    * 生命周期函数--监听页面显示
@@ -26,7 +36,6 @@ Page({
   onShow() {
     
   },
-
   /**
    * 生命周期函数--监听页面隐藏
    */

@@ -22,7 +22,8 @@
       <switch checked="true"></switch>
     </view>
   </view>
-  <view wx:for="{{[1,2,3,4,5,6]}}" class="style-row content-1">
+  <scroll-view scroll-y class="ranking-content">
+    <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11]}}" class="style-row content-1">
     <view>
       <icon type="info" size="34"></icon>
     </view>
@@ -33,6 +34,7 @@
       <text>1220</text>
     </view>
   </view>
+  </scroll-view>
   <view class="menu">
     <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">地图</view></navigator>
     <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">论坛</view></navigator>
