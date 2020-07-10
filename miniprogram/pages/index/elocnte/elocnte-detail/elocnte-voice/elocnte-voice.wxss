@@ -103,6 +103,25 @@ input {
   padding: 0 20rpx;
   /* background-color: #6bafeb; */
 }
+.music-controller {
+  position: absolute;
+  bottom: 14%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  align-items: center;
+}
+.music-controller .iconfont{
+  color: #9c9c9c;
+  opacity: 0.5;
+}
+.icon-shangyishoushangyige, .icon-xiayigexiayishou {
+  font-size: 90rpx;
+}
+.icon-jf-play, .icon-zanting {
+  font-size: 120rpx;
+  margin: 0 60rpx;
+}
 .style-row {
   display: flex;
   flex-direction: row;

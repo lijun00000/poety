@@ -1,5 +1,5 @@
-Page({
 
+Page({
   /**
    * 页面的初始数据
    */
@@ -16,6 +16,30 @@ Page({
     });
   },
   musicPlay() {
+    innerAudioContext.src = '/pages/music/周杰伦 - 默 .mp3';
+    innerAudioContext.onCanplay(() => {
+      const duration = innerAudioContext.duration;
+      if(duration) {
+        console.log('获取成功');
+        let durationFormat = this.dateFormat(duration); console.log(durationFormat);
+      } else {
+        console.log('获取失败');
+        setTimeout(() => {
+          const duration = innerAudioContext.duration;console.log(duration);
+          let durationFormat = this.dateFormat(duration);
+          console.log(durationFormat);
+        }, 1000);
+      }
+    });
+    innerAudioContext.play();
+    this.setData({
+      recordOrMusic: this.data.recordOrMusic,
+      recordHidden: this.data.recordHidden,
+      musicHidden: !this.data.musicHidden
+    });
+  },
+  musicPause() {
+    innerAudioContext.pause();
     this.setData({
       recordOrMusic: this.data.recordOrMusic,
       recordHidden: this.data.recordHidden,
@@ -56,6 +80,14 @@ Page({
       recordHidden: this.data.recordHidden,
       musicHidden: this.data.musicHidden
     });
+  },
+  //格式化时间
+  dateFormat(second: any) {
+    let min: any = Math.floor(second / 60);
+    min = min < 10 ? '0' + min : min;
+    second = Math.floor(second % 60);
+    second = second < 10 ? '0' + second : second;
+    return min + ':' + second;
   },
   /**
    * 生命周期函数--监听页面加载

@@ -94,6 +94,11 @@
       </view>
     </view>
   </scroll-view>
+  <view class="music-controller">
+    <text bindtap="previous" class="iconfont icon-shangyishoushangyige"></text>
+    <text bindtap="play" class="iconfont {{isplay ? 'icon-zanting' : 'icon-jf-play'}}"></text>
+    <text bindtap="next" class="iconfont icon-xiayigexiayishou"></text>
+  </view>
   <view class="style-row comment">
     <view class="comment-content style-row">
       <icon type="info" size="24"></icon>

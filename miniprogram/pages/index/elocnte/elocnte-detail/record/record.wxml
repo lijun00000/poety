@@ -14,7 +14,7 @@
     </view>
     <view wx:if="{{!recordOrMusic}}" class="style-row music-volume">
       <view wx:if="{{musicHidden}}" bindtap="musicPlay" class="music-volume-text"><text>音乐 ▶</text></view>
-      <view wx:if="{{!musicHidden}}" bindtap="musicPlay" class="music-volume-text"><text>音乐 ⏸</text></view>
+      <view wx:if="{{!musicHidden}}" bindtap="musicPause" class="music-volume-text"><text>音乐 ⏸</text></view>
       <view class="music-volume-slider">
           <slider block-size="18" bindchange="slider3change" show-value value="0"/>
       </view>

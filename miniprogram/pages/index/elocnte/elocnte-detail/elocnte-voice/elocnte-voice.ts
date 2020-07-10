@@ -1,97 +1,62 @@
+//全局唯一的背景音频管理器
+const backgroundAudioManager = wx.getBackgroundAudioManager();
+const innerAudioContext = wx.createInnerAudioContext();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    isplay: false,
   },
-  musicData: {
-    innerAudioContext: wx.createInnerAudioContext(),
-    volume: 1,
-    autoplay: false,
-    paused: true,
-    loop: true,
-    src: '/pages/music/nibushizhenzhengdekuaile.mp3'
+  // musicData: {
+  //   innerAudioContext: wx.createInnerAudioContext(),
+  //   volume: 1,
+  //   autoplay: false,
+  //   paused: true,
+  //   loop: true,
+  //   src: '/pages/music/nibushizhenzhengdekuaile.mp3'
+  // },
+  play() {
+    console.log(this.data.isplay);
+    if(!this.data.isplay) {
+      innerAudioContext.play();
+      //backgroundAudioManager.play();
+      innerAudioContext.onPlay(() => {
+        console.log('开始播放');
+        console.log(innerAudioContext.duration);
+      });
+      innerAudioContext.offPlay(() => {});
+      innerAudioContext.onError((res: any) => {
+        console.log(res.errMsg)
+        console.log(res.errCode)
+      });
+    } else {
+      innerAudioContext.pause();
+      //backgroundAudioManager.pause();
+    }
+    this.setData({
+      isplay: !this.data.isplay,
+    });
   },
   previous() {
-    if(this.musicData.innerAudioContext) {
-      this.musicData.innerAudioContext.destroy();
-      this.musicData.innerAudioContext = wx.createInnerAudioContext();
-    }
-    // this.musicData.autoplay = true;
-    this.musicData.src = '/pages/music/周杰伦 - 默 .mp3';
-    this.musicData.innerAudioContext.src = this.musicData.src;
-    this.musicData.innerAudioContext.autoplay = this.musicData.autoplay;
-    this.musicData.innerAudioContext.loop = this.musicData.loop;
-    this.musicData.innerAudioContext.volume = this.musicData.volume;
-    this.musicData.innerAudioContext.play();
-    this.musicData.innerAudioContext.onPlay(() => {
-      console.log('开始播放');
-      console.log(this.musicData.innerAudioContext.duration);
-    });
-    this.musicData.innerAudioContext.onError((res) => {
-      console.log(res.errMsg)
-      console.log(res.errCode)
-    });
+    innerAudioContext.src = '/pages/music/周杰伦 - 默 .mp3';
+    innerAudioContext.play();
   },
   next() {
-    if(this.musicData.innerAudioContext) {
-      this.musicData.innerAudioContext.destroy();
-      this.musicData.innerAudioContext = wx.createInnerAudioContext();
-    }
-    // this.musicData.autoplay = true;
-    this.musicData.src = '/pages/music/nibushizhenzhengdekuaile.mp3';
-    this.musicData.innerAudioContext.src = this.musicData.src;
-    this.musicData.innerAudioContext.autoplay = this.musicData.autoplay;
-    this.musicData.innerAudioContext.loop = this.musicData.loop;
-    this.musicData.innerAudioContext.volume = this.musicData.volume;
-    this.musicData.innerAudioContext.play();
-    this.musicData.innerAudioContext.onPlay(() => {
-      console.log('开始播放');
-      console.log(this.musicData.innerAudioContext.duration);
-    });
-    this.musicData.innerAudioContext.onError((res) => {
-      console.log(res.errMsg)
-      console.log(res.errCode)
-    });
-  },
-  pause() {
-    this.musicData.paused = false;
-    console.log('暂停', this.musicData.paused);
-    this.musicData.innerAudioContext.pause();
-    this.musicData.innerAudioContext.offPlay(() => {});
-    this.musicData.innerAudioContext.offError(() => {});
-  },
-  stop() {
-    console.log('停止');
-    this.musicData.innerAudioContext.stop();
-    this.musicData.innerAudioContext.offPlay(() => {});
-    this.musicData.innerAudioContext.offError(() => {});
-  },
-  play() {
-    this.musicData.paused = true;
-    console.log('播放', this.musicData.paused);
-    // this.musicData.autoplay = true;
-    this.musicData.innerAudioContext.play();
-    this.musicData.innerAudioContext.onPlay(() => {
-      console.log('开始播放');
-      console.log(this.musicData.innerAudioContext.duration);
-    });
-    this.musicData.innerAudioContext.offPlay(() => {});
-    this.musicData.innerAudioContext.onError((res) => {
-      console.log(res.errMsg)
-      console.log(res.errCode)
-    });
+    innerAudioContext.src = '/pages/music/nibushizhenzhengdekuaile.mp3';
+    innerAudioContext.play();
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(param) {
     console.log(param);
-    this.musicData.src = '/pages/music/周杰伦 - 默 .mp3';
-    this.musicData.innerAudioContext.src = this.musicData.src;
-    this.musicData.innerAudioContext.play();
+    innerAudioContext.src = '/pages/music/周杰伦 - 默 .mp3';
+    //backgroundAudioManager.src = '/pages/music/周杰伦 - 默 .mp3';
+    //backgroundAudioManager.title = '默 - 周杰伦';
+    //this.musicData.innerAudioContext.play();
   },
 
   /**
@@ -119,7 +84,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload() {
-    this.musicData.innerAudioContext.stop();
+    innerAudioContext.stop();
   },
 
   /**
