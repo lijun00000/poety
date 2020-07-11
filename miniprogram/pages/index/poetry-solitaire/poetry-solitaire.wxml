@@ -1,21 +1,21 @@
+<view class="background-content" style="background: url('../../image/background.png') center/cover no-repeat"></view>
 
 <view class="content">
-  <view class="top-search">
-    <input class="search-input" model:value="{{value}}" bindblur="blur" data-="{{value}}"/>
-    <button bindtap="search" type="primary" size="mini">搜索</button>
-  </view>
-  <view class="content-1">
+  <!-- <text class="iconfont icon-sousuo search"></text>
+  <input model : value="{{value}}" bindblur="blur" data-="" class="search-input" placeholder="请输入诗词名称或作者名"/> -->
+  <view class="question">
     <view class="question-text"><text>举头望明月，</text></view>
-    <input type="text" class="content-1-input"></input>
-    <view>
-      <!-- <view><navigator url="../index"><button>不玩了</button></navigator></view> -->
-      <view><button type="primary">确定</button></view>
-    </view>
+    <input type="text" auto-focus class="question-input" placeholder="请输入上面诗词的下一句"></input>
+    <view class="button-box"><button type="primary">确定</button></view>
+  </view>
+  <view class="tag">
+    <text>说明：</text>
+    <view ><text>答题正确会获得相应积分，积分会影响排名。</text></view>
   </view>
   <view class="menu">
-    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">地图</view></navigator>
-    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">论坛</view></navigator>
-    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">互动</view></navigator>
-    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">个人中心</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-ditumap31 icon-size"></text><view class="menu-item-text">地图</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-14 icon-size"></text><view class="menu-item-text">论坛</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-bangzhuzhichi_hudongzhibo icon-size"></text><view class="menu-item-text">诗词互动</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-gerenzhongxin icon-size"></text><view class="menu-item-text">个人中心</view></navigator>
   </view>
 </view>

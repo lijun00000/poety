@@ -8,4 +8,24 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
+  background: url('pages/image//background.png') no-repeat;
 } 
+.background-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* filter: blur(40px); */
+  /* opacity: 0.5;  */
+  z-index: -1;
+}
+/* .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  background-color: rgb(109, 108, 108);
+} */
