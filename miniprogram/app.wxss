@@ -10,6 +10,10 @@
   box-sizing: border-box;
   background: url('pages/image//background.png') no-repeat;
 } 
+page {
+  font-family: 'STXingkai';
+  /* font-family: 'STKaiti'; */
+}
 .background-content {
   position: absolute;
   left: 0;

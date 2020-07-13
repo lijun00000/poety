@@ -1,9 +1,9 @@
 <!--index.wxml-->
+<view class="background-content" style="background: url('../../../image/background.png') center/cover no-repeat"></view>
+
 <view class="content">
-  <view class="top-search">
-    <input model : value="{{value}}" bindblur="blur" data-=""/>
-    <button bindtap="search" type="primary" size="mini">搜索</button>
-  </view>
+  <text class="iconfont icon-sousuo search"></text>
+  <input placeholder-style="font-family: 'STXingKai'" model : value="{{value}}" bindblur="blur" data-="" class="search-input" placeholder="请输入诗词名称或作者名"/>
   <view class="style-row title">
     <view class="title-text">沁园春·雪</view>
     <view><button type="default" size="mini" bindtap="goToRecord">我要朗诵</button></view>
@@ -26,10 +26,10 @@
     </view>
   </scroll-view>
   <view class="menu">
-    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">地图</view></navigator>
-    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">论坛</view></navigator>
-    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">互动</view></navigator>
-    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">个人中心</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-ditumap31 icon-size"></text><view class="menu-item-text">地图</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-14 icon-size"></text><view class="menu-item-text">论坛</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-bangzhuzhichi_hudongzhibo icon-size"></text><view class="menu-item-text">诗词互动</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-gerenzhongxin icon-size"></text><view class="menu-item-text">个人中心</view></navigator>
   </view>
 </view>
   

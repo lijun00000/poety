@@ -35,16 +35,6 @@
   font-size: 50rpx;
   color: #afa48f;
 }
-.input {
-  border: solid 1px #afa48f;
-  /* border-radius: 15px; */
-  text-align: left;
-  width: auto;
-  height: 56rpx;
-  padding-top: 16rpx;
-  padding-left: 76rpx;
-  box-shadow: 1px 1px 1px #d4c9b5;
-}
 input {
   border: solid 1px #afa48f;
   /* border-radius: 15px; */
@@ -53,9 +43,6 @@ input {
   height: 70rpx;
   padding-left: 76rpx;
   box-shadow: 1px 1px 1px #d4c9b5;
-}
-.input-placeholder {
-  font-family: 'STXingKai';
 }
 .button-list {
   margin-top: 10rpx;
@@ -66,6 +53,13 @@ input {
   line-height: 80rpx;
   width: auto;
   height: 80rpx;
+  box-shadow: 1px 1px 1px #d4c9b5;
+}
+.button-list-item {
+  border: solid 1px #afa48f;
+  line-height: 154rpx;
+  width: auto;
+  height: 154rpx;
   box-shadow: 1px 1px 1px #d4c9b5;
 }
 .style-row {
@@ -85,12 +79,12 @@ input {
   font-size: 18px;
   line-height: 18px;
   margin-top: 10rpx;
-  padding-top: 22rpx;
+  padding-top: 14rpx;
   padding-bottom: 10rpx;
   box-shadow: 1px 1px 1px #d4c9b5;
 }
 .ranking-content {
-  height: 468rpx;
+  height: 492rpx;
 }
 .ranking {
   width: 77%;

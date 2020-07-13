@@ -3,16 +3,16 @@
 <!-- <view class="mask"></view> -->
 <view class="content">
   <text class="iconfont icon-sousuo search"></text>
-  <textarea adjust-position class="input" bindinput="inputChange" value="{{value}}" placeholder="请输入诗词名称或作者名"></textarea>
-  <!-- <input content-class="input-value" placeholder-class="input-placeholder" model : value="{{value}}" bindblur="blur" data-="" placeholder="请输入诗词名称或作者名"/> -->
+  <input model : value="{{value}}" bindblur="blur" data-="" placeholder="请输入诗词名称或作者名"/>
   <view>
     <navigator url="../index/poetry-solitaire/poetry-solitaire" open-type="navigate" class="button-list"><view class="button-list-item">诗词接龙</view></navigator>
     <navigator url="../index/keywordanswer/keywordanswer" open-type="navigate" class="button-list"><view class="button-list-item">关键词答诗</view></navigator>
     <navigator url="../index/matching/matching" open-type="navigate" class="button-list"><view class="button-list-item">诗词匹配</view></navigator>
     <navigator url="../index/think/think" open-type="navigate" class="button-list"><view class="button-list-item">诗词联想</view></navigator>
     <navigator url="../index/elocnte/elocnte" open-type="navigate" class="button-list"><view class="button-list-item">诗词朗诵</view></navigator>
+    <navigator url="../index/elocnte/elocnte" open-type="navigate" class="button-list"><view class="button-list-item">积分排名</view></navigator>
   </view>
-  <view class="style-row ranking-title">
+  <!-- <view class="style-row ranking-title">
     <view>
       <text class="iconfont icon-photo"></text>
     </view>
@@ -32,9 +32,9 @@
         <text>1220</text>
       </view>
     </view>
-  </scroll-view>
+  </scroll-view> -->
   <view class="menu">
-    <navigator url="../index2/index2" open-type="redirect" class="menu-item"><text class="iconfont icon-ditumap31 icon-size"></text><view class="menu-item-text">地图</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-ditumap31 icon-size"></text><view class="menu-item-text">地图</view></navigator>
     <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-14 icon-size"></text><view class="menu-item-text">论坛</view></navigator>
     <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-bangzhuzhichi_hudongzhibo icon-size"></text><view class="menu-item-text">诗词互动</view></navigator>
     <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-gerenzhongxin icon-size"></text><view class="menu-item-text">个人中心</view></navigator>

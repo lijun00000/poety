@@ -52,7 +52,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(param) {
-    console.log(param);
+    console.log(param.name);
     innerAudioContext.src = '/pages/music/周杰伦 - 默 .mp3';
     //backgroundAudioManager.src = '/pages/music/周杰伦 - 默 .mp3';
     //backgroundAudioManager.title = '默 - 周杰伦';

@@ -10,7 +10,7 @@ Page({
   goToDetail(e: any) {
     console.log(e);
     wx.navigateTo({
-      url: '../elocnte/elocnte-detail/elocnte-detail?name=雪'
+      url: '../elocnte/elocnte-detail/elocnte-voice/elocnte-voice?name=雪'
     });
   },
 

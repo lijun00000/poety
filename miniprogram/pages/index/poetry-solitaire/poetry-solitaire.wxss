@@ -94,7 +94,7 @@ button[type='primary'] {
   opacity: 0.5;
 }
 .button-hover[type='primary'] {
-  background: rgb(139, 186, 230);
+  background: #dfd1b8;
   color: aliceblue;
 }
 /* button:not([size='mini']) {

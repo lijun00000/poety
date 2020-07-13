@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index2/index2",
     "pages/index/poetry-solitaire/poetry-solitaire",
     "pages/index/keywordanswer/keywordanswer",
     "pages/index/matching/matching",

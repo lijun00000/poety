@@ -1,19 +1,20 @@
 <!--index.wxml-->
+<view class="background-content" style="background: url('../../../../image/background.png') center/cover no-repeat"></view>
+
 <view class="content">
-  <view class="top-search">
-    <input model : value="{{value}}" bindblur="blur" data-=""/>
-    <button bindtap="stop" type="primary" size="mini">搜索</button>
-  </view>
-  <scroll-view scroll-y class="content-1">
-    <view class="title">
+  <scroll-view scroll-y class="poetry">
+    <view class="poetry-title">
       沁园春·雪
     </view>
-    <view class="author">
+    <view class="poetry-author">
       <text class="author-text">【作者】毛泽东</text>
       <text class="author-text">【朝代】近代</text>
       <text class="author-text">【朗诵者】张三</text>
+      <picker bindchange="bindPickerChange" value="{{'张三'}}" range="{{['张三','李四']}}">
+        <view>张三</view>
+      </picker>
     </view>
-    <view class="content-2">
+    <view class="poetry-content">
       <text>
         北国风光，
         千里冰封，
@@ -42,15 +43,15 @@
         还看今朝。
       </text>
     </view>
-    <view class="content-3">
-      <view  class="content-3-title">译文</view>
+    <view class="poetry-remark">
+      <view  class="poetry-remark-title">译文</view>
       <view>
         <text>北方的风光，千万里冰封冻，千万里雪花飘。远望长城内外，只剩下无边无际白茫茫一片；宽广的黄河上下，顿时失去了滔滔水势。山岭好像银白色的蟒蛇在飞舞，高原上的丘陵好像许多白象在奔跑，它们都想试一试与老天爷比比高。要等到晴天的时候，看红艳艳的阳光和白皑皑的冰雪交相辉映，分外美好。江山如此媚娇，引得无数英雄竞相倾倒。只可惜秦始皇、汉武帝，略差文学才华；唐太宗、宋太祖，稍逊文治功劳。称雄一世的人物，成吉思汗，只知道拉弓射大雕。这些人物全都过去了，数一数能建功立业的英雄人物，还要看今天的人们。
         </text>
       </view>
     </view>
-    <view class="content-3">
-      <view  class="content-3-title">注释</view>
+    <view class="poetry-remark">
+      <view  class="poetry-remark-title">注释</view>
       <view>
         <text><text class="key">北国：</text>该词源于中国古代的分裂时期，如宋称辽、金为北国，东晋称十六国等为北国，南北朝时代南方的各朝代称在北方与之对抗的各朝代为北国等。毛泽东中的“北国”使人在不觉中产生出一种我国疆土广大的民族自豪感。
               <text class="key">雪：</text>这首词作于红一方面军一九三六年二月由陕北准备东渡黄河进入山西省西部的时候。作者在一九四五年十月七日给柳亚子信中说，这首词作于“初到陕北看见大雪时”。
@@ -79,41 +80,42 @@
         </text>
       </view>
     </view>
-    <view class="content-3">
-      <view  class="content-3-title">赏析</view>
+    <view class="poetry-remark">
+      <view  class="poetry-remark-title">赏析</view>
       <view>
         <text>毛泽东词是中国革命的史诗，是中华诗词海洋中的一朵奇葩。《沁园春·雪》更被南社盟主柳亚子盛赞为千古绝唱。这首词一直是众人的最爱，每次读来都仿佛又回到了那个战火纷飞的年代，又看到了那个指点江山的伟人，不由地沉醉于那种豪放的风格、磅礴的气势、深远的意境、广阔的胸怀。然而，从发表之日起，这首词就遭到了诸多恶意的攻击，引发了旷日持久的争论。有人说它有帝王思想、君主气象；有人说它夸大自吹、离题万里；有人说它比喻不当、缺乏转折；有人说它词意稀疏、平淡无奇；甚至有人说它是模仿之作、旁人代笔……断章取义且流于表面，竟视金玉如砖石。
         </text>
       </view>
     </view>
-    <view class="content-3">
-      <view  class="content-3-title">作者介绍</view>
+    <view class="poetry-remark">
+      <view  class="poetry-remark-title">作者介绍</view>
       <view>
         <text>毛泽东词是中国革命的史诗，是中华诗词海洋中的一朵奇葩。《沁园春·雪》更被南社盟主柳亚子盛赞为千古绝唱。这首词一直是众人的最爱，每次读来都仿佛又回到了那个战火纷飞的年代，又看到了那个指点江山的伟人，不由地沉醉于那种豪放的风格、磅礴的气势、深远的意境、广阔的胸怀。然而，从发表之日起，这首词就遭到了诸多恶意的攻击，引发了旷日持久的争论。有人说它有帝王思想、君主气象；有人说它夸大自吹、离题万里；有人说它比喻不当、缺乏转折；有人说它词意稀疏、平淡无奇；甚至有人说它是模仿之作、旁人代笔……断章取义且流于表面，竟视金玉如砖石。
         </text>
       </view>
     </view>
   </scroll-view>
-  <view class="music-controller">
+  <!-- <view class="music-controller">
     <text bindtap="previous" class="iconfont icon-shangyishoushangyige"></text>
     <text bindtap="play" class="iconfont {{isplay ? 'icon-zanting' : 'icon-jf-play'}}"></text>
     <text bindtap="next" class="iconfont icon-xiayigexiayishou"></text>
-  </view>
+  </view> -->
   <view class="style-row comment">
-    <view class="comment-content style-row">
-      <icon type="info" size="24"></icon>
+    <view class="comment-content-left">
       <text>评论数 1200</text>
     </view>
-    <view class="comment-content style-row">
-      <icon type="info" size="24"></icon>
-      <text>我要朗诵</text>
+    <view class="comment-content">
+      <text bindtap="play" class="iconfont {{isplay ? 'icon-zanting' : 'icon-jf-play'}}"></text>
+    </view>
+    <view class="comment-content-right">
+      <navigator url="../record/record"><text>我要朗诵</text></navigator>
     </view>
   </view>
   <view class="menu">
-    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">地图</view></navigator>
-    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">论坛</view></navigator>
-    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">互动</view></navigator>
-    <navigator url="" open-type="navigate" class="menu-item"><view class="menu-item-text">个人中心</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-ditumap31 icon-size"></text><view class="menu-item-text">地图</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-14 icon-size"></text><view class="menu-item-text">论坛</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-bangzhuzhichi_hudongzhibo icon-size"></text><view class="menu-item-text">诗词互动</view></navigator>
+    <navigator url="" open-type="navigate" class="menu-item"><text class="iconfont icon-gerenzhongxin icon-size"></text><view class="menu-item-text">个人中心</view></navigator>
   </view>
 </view>
   
